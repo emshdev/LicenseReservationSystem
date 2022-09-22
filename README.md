@@ -1,6 +1,26 @@
 # LicenseReservationSystem
 서울과학기술대학교 전자회로(2) 과목의 IDEC S/W를 팀내에서 팀원들에게 분배하기 위한 시스템입니다.
-
+## 목차
+1. [들어가기 전 주의사항](#들어가기-전-주의사항)
+2. [바탕](#바탕)
+    1. [기본 프로그래밍 언어](#기본-프로그래밍-언어)
+    2. [Database 관리](#Database-관리)
+3. [테스트를 위해 Python에서 꼭 추가적으로 설치해줘야 하는 모듈들](#테스트를-위해-Python에서-꼭-추가적으로-설치해줘야-하는-모듈들)
+    1. [Flask](#Flask)
+    2. [psycopg2](#psycopg)
+    3. [gunicorn](#gunicorn)
+4. [Deploy 방법](#Deploy-방법)
+    1. [소스코드 다운로드](#소스코드-다운로드)
+    2. [Postgresql 서버 설정 및 초기DB 생성](https://github.com/emshdev/LicenseReservationSystem/edit/main/README.md#postgresql-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%B4%88%EA%B8%B0db-%EC%83%9D%EC%84%B1)
+    3. [환경 변수 설정](#환경-변수-설정)
+    4. [서버 세팅 방법](#서버-세팅-방법)
+        1. Heroku 가입 및 Postgresql 서버 만들기
+        2. Heroku Postgres 사용자 정보 반영하기
+        3. Heroku에 업로드
+5. [Deploy 이후 사용 방법](#Deploy-이후-사용-방법)
+    1. [메인 페이지](#메인-페이지)
+    2. [사용자 등록](#사용자-등록)
+    3. [라이센스 접근](#라이센스-접근)
 ## 들어가기 전 주의사항
 1. 본 소스코드는 시간에 대한 분배만 담당합니다.
   * 실제 라이센스는 본 프로그램에 따라 등록, 회수되지 않습니다.
