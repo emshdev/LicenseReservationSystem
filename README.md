@@ -11,7 +11,7 @@
     3. [gunicorn](#gunicorn)
 4. [Deploy 방법](#Deploy-방법)
     1. [소스코드 다운로드](#소스코드-다운로드)
-    2. [Postgresql 서버 설정 및 초기DB 생성](https://github.com/emshdev/LicenseReservationSystem/edit/main/README.md#postgresql-%EC%84%9C%EB%B2%84-%EC%84%A4%EC%A0%95-%EB%B0%8F-%EC%B4%88%EA%B8%B0db-%EC%83%9D%EC%84%B1)
+    2. [Postgresql 서버 설정 및 초기DB 생성](#postgresql-서버-설정-및-초기db-생성)
     3. [환경 변수 설정](#환경-변수-설정)
     4. [서버 세팅 방법](#서버-세팅-방법)
         1. Heroku 가입 및 Postgresql 서버 만들기
@@ -76,7 +76,7 @@ PGPASSWORD=<사용자 비밀번호> psql -h <db서버url이나ip> -U <사용자�
 #### "주의사항: 본 코드는 heroku에 업로드하여 사용하는 것만을 검증하였습니다."
 * **소스코드를 먼저 다운로드 받고 진행해주세요**
 1. Heroku 가입 및 Postgresql 서버 만들기
-* [(외부링크)Heroku](https://www.heroku.com)에 접속하여 [(외부링크)사용자 가입을 진행](https://programming4myself.tistory.com/5)합니다.
+* [(외부링크)Heroku](https://www.heroku.com)에 접속하여 [(외부링크)사용자 가입을 진행](https://programming4myself.tistory.com/5#menu1)합니다.
 * Heroku에 가입이 완료되면, [(외부링크)new app](https://dashboard.heroku.com/new-app)에서 **앱 이름**을 지정하고 create app을 클릭합니다. 
 #### (곧 쓰일 예정으로 앱 이름은 반드시 정확하게 메모해두세요)
 * 나타나는 페이지에서 Resources를 클릭합니다.
@@ -89,8 +89,8 @@ PGPASSWORD=<사용자 비밀번호> psql -h <db서버url이나ip> -U <사용자�
 * 나타난 정보를 다운로드 받은 소스코드의 [Setting.py에 적용](#환경-변수-설정)해주고 저장합니다.
 3. Heroku에 업로드
 * Heroku에 git 방식으로 업로드하기 위해서는 [(외부링크)git](https://git-scm.com/)과 [(외부링크)Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)가 필요합니다.
-* 위의 두 프로그램의 설치 방법에 대해서는 문서화가 잘 되어있으므로 해당 사이트나 구글등에서 검색을 통해 [(외부링크)문서를 참조](https://programming4myself.tistory.com/5)하시는 것을 부탁드립니다.
-* Heroku CLI에서 로그인을 진행합니다.
+* 위의 두 프로그램의 설치 방법에 대해서는 문서화가 잘 되어있으므로 해당 사이트나 구글등에서 검색을 통해 [(외부링크)문서를 참조](https://programming4myself.tistory.com/5#menu2)하시는 것을 부탁드립니다.
+* Heroku CLI에서 로그인을 진행합니다.[(외부링크)윈도우의 경우 참고](https://programming4myself.tistory.com/5#menu3)
 ```
 $ heroku login
 ```
