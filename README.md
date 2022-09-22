@@ -3,12 +3,15 @@
 
 ## 들어가기 전 주의사항
 1. 본 소스코드는 시간에 대한 분배만 담당합니다.
-2. 실제 라이센스는 본 프로그램에 따라 등록, 회수되지 않습니다.
-3. 시간에 대한 약속이나 분배가 힘든 팀에게 사용을 권장합니다.
-4. 본 문서의 하이퍼링크 중 괄호가 없는 링크는 문서의 다른 목차로 이동됩니다.
-5. 본 문서는 순차적으로 읽을 것을 고려하지 않고 작성되었습니다. 
-6. 세팅 방법에 대해 순차적인 튜토리얼은 [서버 세팅 방법](#서버-세팅-방법)에 있습니다.
-7. [서버 세팅 방법](#서버-세팅-방법) 목차만 읽게 될 경우, 하이퍼링크 중 다른 목차로 이동하는 링크들은 반드시 확인해주세요.
+  * 실제 라이센스는 본 프로그램에 따라 등록, 회수되지 않습니다.
+  * 시간에 대한 약속이나 분배가 힘든 팀에게 사용을 권장합니다.
+2. 본 문서의 하이퍼링크 중 괄호가 없는 링크는 문서의 다른 목차로 이동됩니다. 
+  * 괄호가 존재하는 하이퍼링크들은 읽던 페이지를 빠져나오게 됩니다.
+3. 본 문서는 순차적으로 읽을 것을 고려하지 않고 작성되었습니다. 
+  * 순차적인 세팅 튜토리얼은 [서버 세팅 방법](#서버-세팅-방법)에 있습니다.
+4. [서버 세팅 방법](#서버-세팅-방법) 목차만 읽게 될 경우, 하이퍼링크 중 다른 목차로 이동하는 링크들은 반드시 확인해주세요.
+
+
 ## 바탕
 ### 기본 프로그래밍 언어
 * Python3 
@@ -27,15 +30,15 @@
 * flask와 같은 웹 프레임워크에 http 요청을 변환하여 전달하는 역할을 합니다.
 ## Deploy 방법
 ### 소스코드 다운로드
-* git clone, fork등 각자의 방법으로 [(내부리디렉션)본 소스코드](https://github.com/emshdev/LicenseReservationSystem)를 취득합니다.
+* git clone, fork등 각자의 방법으로 [(소스코드)본 소스코드](https://github.com/emshdev/LicenseReservationSystem)를 취득합니다.
 ### Postgresql 서버 설정 및 초기DB 생성
 * heroku와 같은 PaaS에서 제공하는 Postgres [서버를 이용](#서버-세팅-방법)하거나, 이 [(외부링크)블로그](https://valuefactory.tistory.com/491)와 같이 직접 본인의 서버에 설치하여 운용합니다.
-* 서버를 생성한 이후에는 아래와 같은 명령문을 통해 데이터베이스에 접속해 [(내부리디렉션)dump.sql](https://github.com/emshdev/LicenseReservationSystem/blob/main/dump.sql)을 실행시켜줍니다. (필수)
+* 서버를 생성한 이후에는 아래와 같은 명령문을 통해 데이터베이스에 접속해 [(소스코드)dump.sql](https://github.com/emshdev/LicenseReservationSystem/blob/main/dump.sql)을 실행시켜줍니다. (필수)
 ```
 PGPASSWORD=<사용자 비밀번호> psql -h <db서버url이나ip> -U <사용자명> -d <db명> -f dump.sql
 ```
 ### 환경 변수 설정
-* 사용자의 입맛대로 변경이 가능한 변수들은 최대한 [(내부리디렉션)Setting.py](https://github.com/emshdev/LicenseReservationSystem/blob/main/Setting.py)로 모아두려고 노력했습니다.
+* 사용자의 입맛대로 변경이 가능한 변수들은 최대한 [(소스코드)Setting.py](https://github.com/emshdev/LicenseReservationSystem/blob/main/Setting.py)로 모아두려고 노력했습니다.
 * 여기서 db를 연결해주기 위해 반드시 설정해야 하는 변수는 credentials 입니다.
 1. host
 * <db서버url이나ip> 를 postgresql 서버의 주소로 대체합니다.
@@ -76,8 +79,10 @@ $ heroku login
 $ heroku git:clone -a <앱 이름>
 $ cd <앱 이름>
 ```
-* (터미널을 종료하거나 다른 폴더로 이동하지 말아주세요)앱 이름과 동일한 이름으로 생성된 폴더에 수정한 Setting.py를 포함한 전체 소스코드를 붙여 넣어줍니다. 
-* 터미널에서 ls나 dir 등의 명령어를 실행해 폴더의 최상단에 소스코드가 존재하는지 확인합니다. ([(내부리디렉션)wsgi.py](https://github.com/emshdev/LicenseReservationSystem/blob/main/wsgi.py)와 [(내부리디렉션)Procfile](https://github.com/emshdev/LicenseReservationSystem/blob/main/Procfile)이 보이면 됩니다.)
+#### (터미널을 종료하거나 다른 폴더로 이동하지 말아주세요)
+* 앱 이름과 동일한 이름으로 생성된 폴더에 수정한 Setting.py를 포함한 전체 소스코드를 붙여 넣어줍니다. 
+* 터미널에서 ls나 dir 등의 명령어를 실행해 폴더의 최상단에 소스코드가 존재하는지 확인합니다. 
+#### ([(소스코드)wsgi.py](https://github.com/emshdev/LicenseReservationSystem/blob/main/wsgi.py)와 [(소스코드)Procfile](https://github.com/emshdev/LicenseReservationSystem/blob/main/Procfile)이 보이면 됩니다.)
 * 터미널에서 아래의 명령을 실행해줍니다. (일반적으로 깃허브에서 진행하는 커밋과 달리 앱 빌드 과정이 있습니다. 시간을 갖고 기다려주세요.)
 ```
 $ git add .
