@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="stylesheet" href='/static/style.css' />
+      <title>{{licensenum}}번 라이센스 대여 페이지</title>
+  </head>
+  
+   <body>
+      <div id="body-wrapper">
+         <div id="body-content">
+      <center>
+      <p><h1>{{licensenum}}번 라이센스 대여</h1></p>
+      <table border = 1>
+         <thead>
+            <td>현재 사용자</td>
+            <td>라이센스 반납 기한</td>
+         </thead>
+            <tr>
+               <td>{{rows2}}</td>
+               <td>{{rows}}</td>
+            </tr>
+     </table>
+     </center>
+     <br></br>
+     <br>
+     <center><h2>아래에 학번을 입력하면<br>예약 절차가 시작됩니다.</h2></center>
+     <center><form action = "{{ url_for('checkin') }}" method = "GET">
+        Student ID<br>
+        <input type = "text" name = "user_ID" /></br>
+        <input type="hidden" name='licenseID', value='{{licensenum}}'>
+        <input type = "submit" value = "제출" /><br>
+     </form></center>
+     <br><br><br>
+     <center><button onclick="window.location.href='{{url_for('index')}}';"><h3>초기화면으로 돌아가기</h3></button><br></center>
+   </div>
+   <footer class = "footer"><center>Courtesy of Signal Processing Lab, SEOULTECH</center></footer>
+</div>
+   </body>
+</html>

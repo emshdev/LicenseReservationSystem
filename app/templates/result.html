@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body>
+       
+   </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/static/style.css' />
+    <title>결과값</title>
+</head>
+<br>
+<br>
+
+<body>
+    <div id="body-wrapper">
+        <div id="body-content">
+    결과 : {{ msg }}<br>
+    사유 : {{reason}}<br>
+    <button onclick="window.location.href='{{url_for('index')}}';"><h1>초기화면으로 돌아가기</h1></button><br>
+</div>
+<footer class = "footer"><center>Courtesy of Signal Processing Lab, SEOULTECH</center></footer>
+</div>
+</body>
+</html>

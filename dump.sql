@@ -1,0 +1,13 @@
+BEGIN TRANSACTION;
+CREATE TABLE users (StudentID text, Name text, "PhoneNum" text);
+INSERT INTO users VALUES('11111111','ADLAB','010-0000-0000');
+CREATE TABLE IF NOT EXISTS "reserve" (
+	"licenseID"	INTEGER,
+	"StudentID"	text,
+	"CheckInTime"	timestamp,
+	"Checkouttime"	timestamp,
+	"id"	SERIAL PRIMARY KEY
+);
+INSERT INTO reserve VALUES(1,'11111111','2022-09-20 19:32:02.966657','2022-09-20 19:32:02.966657',1);
+INSERT INTO reserve VALUES(2,'11111111','2022-09-20 19:32:02.966657','2022-09-20 19:32:02.966657',2);
+COMMIT;

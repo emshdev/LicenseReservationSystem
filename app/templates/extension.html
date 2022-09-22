@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="stylesheet" href='/static/style.css' />
+      <title>라이센스 대여 시스템</title>
+  </head><center>
+   <body>
+      <div id="body-wrapper">
+         <div id="body-content">
+      <table border = 1>
+         <thead>
+            <td>현재 사용자</td>
+            <td>사용종료 시간</td>
+         </thead>
+            <tr>
+               <td>{{rows2}}</td>
+               <td>{{rows}}</td>
+            </tr>
+     </table>
+     <br></br>
+     <br>
+     <h1>아래에 학번을 입력하면 연장 절차가 시작됩니다.</h1>
+     <form action = "{{ url_for('extender', licensenum=licensenum) }}" method = "POST">
+        Student ID<br>
+        <input type = "text" name = "user_ID" /></br>
+        <input type="hidden" name='licensenum', value='{{licensenum}}'>
+        <input type = "submit" value = "제출" /><br>
+     </form>
+     <br><br>
+     <button onclick="window.location.href='{{url_for('index')}}';"><h3>초기화면으로 돌아가기</h3></button><br>
+   </div>
+   <footer class = "footer"><center>Courtesy of Signal Processing Lab, SEOULTECH</center></footer>
+   </div>
+   </body>
+   </center>
+</html>

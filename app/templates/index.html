@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/static/style.css' />
+    <title>라이센스 대여 시스템</title>
+</head>
+<br>
+<br>
+
+<body>
+    <div id="body-wrapper">
+        <div id="body-content">
+    <center><button onclick="window.location.href='{{url_for('user')}}';"><h1>사용자등록</h1></button></center><br><br>
+    <center><button onclick="window.location.href='{{url_for('select', num='1')}}';"><h1>1번 라이센스</h1></button>
+    <button onclick="window.location.href='{{url_for('select', num='2')}}';"><h1>2번 라이센스</h1></button></center>
+    </div>
+    <footer class = "footer"><center>Courtesy of Signal Processing Lab, SEOULTECH</center></footer>
+    </div>
+</body>
+
+</html>

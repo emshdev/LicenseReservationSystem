@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/static/style.css' />
+    <title>{{licensenum}}번 라이센스 대여 옵션</title>
+</head>
+<br>
+<br>
+
+<body>
+    <center><p><h1>{{licensenum}}번 라이센스 옵션</h1></p></center>
+    <div id="body-wrapper">
+        <div id="body-content">
+                <center><button onclick="window.location.href='{{ url_for('reservation', licensenum=licensenum) }}';"><h1>라이센스 대여</h1></button></center><br>
+                <center><button onclick="window.location.href='{{ url_for('license', licensenum=licensenum) }}';"><h1>대여 현황</h1></button></center><br>
+                <center><button onclick="window.location.href='{{ url_for('extender', licensenum=licensenum) }}';"><h1>대여 연장</h1></button></center><br>
+                <center><button onclick="window.location.href='{{url_for('index')}}';"><h1>초기화면으로 돌아가기</h1></button></center><br>
+                </div>
+                <footer class = "footer"><center>Courtesy of Signal Processing Lab, SEOULTECH</center></footer>
+    </div>
+</body>
+</html>

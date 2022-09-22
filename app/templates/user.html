@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <link rel="stylesheet" href='/static/style.css' />
+      <title>사용자 등록 </title>
+  </head>
+   <center><body>
+      <div id="body-wrapper">
+         <div id="body-content">
+      <form action = "{{ url_for('user_info') }}" method = "POST">
+         <h3>User Information</h3>
+         {{question}}<br>
+         <input type = "text" name = "magicword" /><br>
+         
+         학번<br>
+         <input type = "text" name = "user_ID" /></br>
+         이름<br>
+         <input type = "text" name = "user_name" ></textarea></br>
+         긴급 연락처 ( '-' 유무 상관 없습니다)<br>
+         <input type = "text" name = "phonenumber"></textarea></br>
+
+
+         <h2><input type = "submit" style = "height:50px; width:80px" value = "제출" /></h2><br>
+         
+         
+      </form>
+      <br><br><br><br>
+      <button onclick="window.location.href='{{url_for('index')}}';"><h1>초기화면으로 돌아가기</h1></button><br>
+   </div>
+   <footer class = "footer"><center>Courtesy of Signal Processing Lab, SEOULTECH</center></footer>
+</div>
+   </body></center>
+</html>
