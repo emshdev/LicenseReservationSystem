@@ -9,18 +9,11 @@ app = Flask(__name__)
 @app.route('/register')
 def user():
     return render_template('user.html',question=Setting.question_for_magicword)
-@app.route('/show')
-def show():
-    db=psycopg2.connect(Setting.credentials)
-    cur=db.cursor()
-    cur.execute("SELECT * FROM users")
-    rows=cur.fetchall()
-    cur.close()
-    db.close()
-    return render_template("show.html",rows = rows)
+
 @app.route('/select/<num>')
 def select(num):
     return render_template("select.html", licensenum=num)
+    
 @app.route('/checkin',methods = ['GET'])
 def checkin():
     con=psycopg2.connect(Setting.credentials)
